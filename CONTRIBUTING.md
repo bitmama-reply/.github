@@ -16,7 +16,23 @@ Ogni repository deve avere, entro il primo giorno di vita:
 
 Questi metadati alimentano l'[indice dei progetti](https://github.com/bitmama-reply) sulla home dell'organizzazione. Un repository senza `client-*` compare come "Senza cliente assegnato".
 
-Se `status-*` non è presente, lo stato viene dedotto dall'ultimo push: attivo entro 90 giorni, in manutenzione entro un anno, dormiente oltre. Il topic esplicito serve quando la deduzione sbaglia — per esempio un progetto in manutenzione contrattuale che non riceve commit da mesi.
+### Valori ammessi
+
+`status-*` è un **insieme chiuso** di tre valori:
+
+| Topic | Significato |
+| --- | --- |
+| `status-active` | in sviluppo adesso |
+| `status-maintenance` | vivo ma senza sviluppo in corso: interventi su richiesta, manutenzione contrattuale |
+| `status-dormant` | chiuso o fermo, candidato ad archiviazione |
+
+Qualsiasi altro valore viene ignorato. Se `status-*` manca, lo stato è dedotto dall'ultimo push: attivo entro 90 giorni, in manutenzione entro un anno, dormiente oltre. Il topic esplicito serve quando la deduzione sbaglia — un progetto in manutenzione contrattuale che non riceve commit da mesi risulterebbe altrimenti dormiente.
+
+`client-*` e `stack-*` sono invece **aperti**: si aggiungono man mano che arrivano clienti e tecnologie. Per questo l'elenco dei valori già in uso non sta qui, dove invecchierebbe, ma in fondo all'[indice dei progetti](https://github.com/bitmama-reply), rigenerato ogni settimana dai repository stessi. **Guardalo prima di inventare un valore nuovo**: `stack-nextjs` e `stack-next` per GitHub sono due etichette diverse e spezzano i raggruppamenti dell'indice.
+
+Un cliente, uno slug: `client-hera` copre tutte le società del gruppo, non se ne apre uno per controllata. Per lo stack si etichetta ciò che serve a ritrovare il repo — framework, CMS, linguaggio se dominante — non ogni dipendenza del `package.json`.
+
+Vincoli di forma imposti da GitHub: solo minuscole, cifre e trattini, massimo 50 caratteri per topic, massimo 20 topics per repository.
 
 ## README
 
