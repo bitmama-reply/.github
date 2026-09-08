@@ -1,0 +1,48 @@
+# Template CODEOWNERS per i repository bitmama-reply.
+# Copialo in `.github/CODEOWNERS` del tuo repo, compila la riga `*`,
+# cancella i commenti che non ti servono.
+#
+# Questo file non ha effetto dove si trova: GitHub non eredita il
+# CODEOWNERS dal repository `.github` agli altri repository dell'orga-
+# nizzazione, a differenza di CONTRIBUTING o dei template delle issue.
+# Va copiato in ogni repository, uno per uno.
+
+# ─── La riga che conta ────────────────────────────────────────────────
+#
+# La regola `*` vale per l'intero repository ed è quella che l'indice
+# dei progetti usa come referente. Tienine UNA SOLA e mettila per prima:
+# GitHub applica l'ultima regola che corrisponde a un file, l'indice
+# legge la prima riga `*` che incontra, e con una sola riga i due
+# coincidono. Con due righe `*` l'indice mostrerebbe un referente
+# diverso da quello che GitHub assegna davvero.
+
+*  @nome.cognome
+
+# ─── Regole più specifiche, se servono ────────────────────────────────
+#
+# Vanno DOPO la riga `*` e valgono solo per i percorsi indicati; la `*`
+# resta il referente generale del repository. La sintassi è quella di
+# .gitignore, ma le negazioni (`!`) non sono supportate.
+#
+# /infra/              @bitmama-reply/nome-team
+# /src/design-system/  @bitmama-reply/design
+# *.tf                 @bitmama-reply/nome-team
+# /docs/               @un-collega @un-altro
+
+# ─── Perché funzioni davvero ──────────────────────────────────────────
+#
+# 1. Ogni owner deve avere accesso in SCRITTURA a questo repository.
+#    Un handle senza accesso rende la regola invalida e GitHub la ignora
+#    in silenzio. Gli errori si vedono in Settings → Code and automation
+#    → CODEOWNERS, o con `gh api repos/<org>/<repo>/codeowners/errors`.
+#
+# 2. Perché la review sia obbligatoria serve la branch protection con
+#    "Require review from Code Owners" sul branch protetto. Senza, il
+#    file assegna solo i reviewer in automatico.
+#
+# 3. Preferisci un team (`@bitmama-reply/nome-team`) a un handle
+#    personale quando il repo è seguito da una squadra: sopravvive ai
+#    cambi di progetto. L'handle va bene per un referente singolo.
+#
+# 4. Il team va scritto con l'organizzazione davanti e serve anche a lui
+#    l'accesso in scrittura, altrimenti vale il punto 1.

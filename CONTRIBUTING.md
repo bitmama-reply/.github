@@ -12,7 +12,7 @@ Ogni repository deve avere, entro il primo giorno di vita:
 | Cliente | topic `client-<slug>` | `client-nome-cliente` |
 | Stack | topic `stack-<slug>` (uno o più) | `stack-nextjs` `stack-wordpress` |
 | Stato | topic `status-<slug>` | `status-active`, `status-maintenance`, `status-dormant` |
-| Referente | `CODEOWNERS` | `* @nome.cognome` |
+| Referente | [`CODEOWNERS`](CODEOWNERS-template) | `* @nome.cognome` |
 
 Questi metadati alimentano l'[indice dei progetti](https://github.com/bitmama-reply) sulla home dell'organizzazione. Un repository senza `client-*` compare come "Senza cliente assegnato".
 
