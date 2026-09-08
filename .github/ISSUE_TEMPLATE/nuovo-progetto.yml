@@ -6,15 +6,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        Serve a evitare che un repository nasca senza cliente, senza referente e senza README —
-        la condizione in cui si trovano oggi la maggior parte dei repository dormienti dell'org.
+        Serve a evitare che un repository nasca senza cliente, senza referente e senza README:
+        sono i tre dati che rendono ritrovabile un progetto sei mesi dopo.
 
   - type: input
     id: repo
     attributes:
       label: Nome del repository
       description: minuscolo, kebab-case, prefisso cliente se il cliente ha più repo
-      placeholder: hera-portale-clienti
+      placeholder: cliente-portale-clienti
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
     attributes:
       label: Cliente
       description: diventa il topic `client-<slug>`
-      placeholder: Hera
+      placeholder: Nome cliente
     validations:
       required: true
 

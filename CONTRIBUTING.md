@@ -8,8 +8,8 @@ Ogni repository deve avere, entro il primo giorno di vita:
 
 | Cosa | Dove | Esempio |
 | --- | --- | --- |
-| Descrizione in una riga | campo *Description* | `Portale clienti Hera — Next.js + Liferay headless` |
-| Cliente | topic `client-<slug>` | `client-hera` |
+| Descrizione in una riga | campo *Description* | `Portale clienti — Next.js + CMS headless` |
+| Cliente | topic `client-<slug>` | `client-nome-cliente` |
 | Stack | topic `stack-<slug>` (uno o più) | `stack-nextjs` `stack-wordpress` |
 | Stato | topic `status-<slug>` | `status-active`, `status-maintenance`, `status-dormant` |
 | Referente | `CODEOWNERS` | `* @nome.cognome` |
@@ -33,7 +33,7 @@ Usa `README-template.md` di questo repository come base. Le cinque sezioni non n
 Le scelte che qualcuno rimetterà in discussione fra un anno vanno in `docs/adr/`, un file per decisione, formato `NNNN-titolo-in-kebab-case.md`:
 
 ```markdown
-# 0003 — Passaggio a Liferay headless
+# 0003 — Passaggio a un CMS headless
 
 **Data:** 2026-03-12 · **Stato:** accettata · **Decisori:** @nome, @nome
 
