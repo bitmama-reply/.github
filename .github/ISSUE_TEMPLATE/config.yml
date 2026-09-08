@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Aprire un nuovo progetto o repository
+    url: https://github.com/bitmama-reply/.github-private/issues/new?template=nuovo-progetto.yml
+    about: La richiesta si apre in un posto solo, non sul repository di un progetto esistente.
+  - name: Convenzioni dell'organizzazione
+    url: https://github.com/bitmama-reply/.github/blob/main/CONTRIBUTING.md
+    about: Metadati obbligatori, naming dei branch, ADR, cosa fare quando un progetto chiude.
